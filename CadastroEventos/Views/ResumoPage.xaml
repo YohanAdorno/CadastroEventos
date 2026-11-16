@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CadastroEventos.Views.ResumoPage"
+    Title="Resumo do Evento">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="18">
+
+            <Label
+                Text="Resumo do Evento"
+                FontSize="26"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="Nome do evento:"
+                FontAttributes="Bold"/>
+
+            <Label
+                Text="{Binding NomeEvento}"
+                FontSize="18"/>
+
+            <Label
+                Text="Data de início:"
+                FontAttributes="Bold"/>
+
+            <Label
+                Text="{Binding DataInicio, StringFormat='{0:dd/MM/yyyy}'}"/>
+
+            <Label
+                Text="Data de término:"
+                FontAttributes="Bold"/>
+
+            <Label
+                Text="{Binding DataTermino, StringFormat='{0:dd/MM/yyyy}'}"/>
+
+            <Label
+                Text="Número de participantes:"
+                FontAttributes="Bold"/>
+
+            <Label
+                Text="{Binding NumeroParticipantes}"/>
+
+            <Label
+                Text="Local do evento:"
+                FontAttributes="Bold"/>
+
+            <Label
+                Text="{Binding LocalEvento}"/>
+
+            <Label
+                Text="Custo por participante:"
+                FontAttributes="Bold"/>
+
+            <Label
+                Text="{Binding CustoPorParticipante, StringFormat='R$ {0:N2}'}"/>
+
+            <Label
+                Text="Duração do evento:"
+                FontAttributes="Bold"/>
+
+            <Label
+                Text="{Binding DuracaoDias, StringFormat='{0} dias'}"/>
+
+            <Label
+                Text="Diferença de tempo (TimeSpan):"
+                FontAttributes="Bold"/>
+
+            <Label
+                Text="{Binding Duracao}"/>
+
+            <Label
+                Text="Custo total do evento:"
+                FontAttributes="Bold"
+                TextColor="Green"/>
+
+            <Label
+                Text="{Binding CustoTotal, StringFormat='R$ {0:N2}'}"
+                FontSize="22"
+                FontAttributes="Bold"
+                TextColor="Green"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
